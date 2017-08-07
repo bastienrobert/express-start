@@ -1,12 +1,12 @@
 module.exports = function(app){
 
-  app.get('/', function(request, response){
-    response.render('pages/index')
+  app.get('/', function(req, res){
+    res.render('pages/index')
   })
 
-  app.post('/', function(request, response){
-    request.flash('error', 'New error flash message asked')
-    response.redirect('/')
+  app.post('/', function(req, res){
+    req.flash('error', 'New error flash message asked')
+    res.redirect('/')
   })
 
 }

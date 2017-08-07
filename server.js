@@ -10,4 +10,5 @@ require('./app/middlewares/init/express-session')(app)
 require('./app/middlewares/application')(app)
 
 // Routes file
-require('./config/routes')(app)
+require('./config/routes')(app, express)
+require('./lib/http-errors')(app, express) // Errors routes
