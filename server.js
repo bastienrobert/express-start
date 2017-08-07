@@ -3,7 +3,11 @@ let engine = require('ejs-locals')
 let app = express()
 
 // Configuration server'file
-require('./config/express.js')(app, express, engine)
+require('./config/express')(app, express, engine)
 
 // Routes file
-require('./config/routes.js')(app)
+require('./config/routes')(app)
+
+
+// Middleware import
+require('./app/middlewares/init/express-session')(app)
