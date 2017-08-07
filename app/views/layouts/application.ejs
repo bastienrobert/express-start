@@ -8,8 +8,8 @@
   </head>
   <body>
     <% include partials/header %>
-    <% if (typeof(error) != 'undefined') { %>
-      <% include partials/error %>
+    <% if (typeof(flash) != 'undefined'){ %>
+      <%= flash.error %>
     <% } %>
     <%- body %>
     <% include partials/footer %>
