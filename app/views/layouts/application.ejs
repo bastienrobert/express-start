@@ -8,7 +8,9 @@
   </head>
   <body>
     <% include partials/header %>
-    <% include partials/error %>
+    <% if (typeof(error) != 'undefined') { %>
+      <% include partials/error %>
+    <% } %>
     <%- body %>
     <% include partials/footer %>
   </body>
