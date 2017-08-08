@@ -1,3 +1,5 @@
-<div id="error">
-  New error
-</div>
+<% if (typeof(flash) != 'undefined'){ %>
+  <div id="error">
+    <%= flash.error %>
+  </div>
+<% } %>
