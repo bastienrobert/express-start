@@ -4,6 +4,7 @@ let app = express()
 
 // Get the root_path
 global.root_path = require('./lib/root-path.js')()
+global.locals = require('./lib/locals.js')()
 
 // Configuration server'file
 require('./config/express')(app, express, engine)
