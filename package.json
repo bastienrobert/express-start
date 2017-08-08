@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,12 @@
     "ejs-locals": "^1.0.2",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
+    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0"
   }
 }
