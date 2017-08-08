@@ -62,3 +62,9 @@ Some helpers has been added with the Package express-helpers (https://www.npmjs.
 Express Helpers is a port of EJS's ViewHelpers and additional helpers are very similar to those found in the Ruby on Rails framework.
 
 Check the documentation here : https://github.com/tanema/express-helpers/wiki
+
+## Locals variables
+You can add locals by copying local_env.example.json to local_env.json.
+Then, it's a simple JSON array.
+
+Add new keys & values, and then call it with the method : global.locals.KEY
