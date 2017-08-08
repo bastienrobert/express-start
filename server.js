@@ -2,6 +2,9 @@ let express = require('express')
 let engine = require('ejs-locals')
 let app = express()
 
+// Get the root_path
+let root_path = require('./lib/root-path.js')()
+
 // Configuration server'file
 require('./config/express')(app, express, engine)
 
