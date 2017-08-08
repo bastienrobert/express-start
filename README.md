@@ -56,3 +56,9 @@ You can see all the doc about sequelize here : http://docs.sequelizejs.com/manua
 sequelize
 sequelize help:model:create
 ```
+
+## Helpers
+Some helpers has been added with the Package express-helpers (https://www.npmjs.com/package/express-helpers).
+Express Helpers is a port of EJS's ViewHelpers and additional helpers are very similar to those found in the Ruby on Rails framework.
+
+Check the documentation here : https://github.com/tanema/express-helpers/wiki
