@@ -3,11 +3,12 @@ let gulp = require('gulp'),
     nodemon = require('gulp-nodemon')
 
 let assets = 'app/assets/'
+let dist = 'public/assets/'
 
 gulp.task('sass', function(){
   return gulp.src(assets + 'stylesheets/' + '*.scss')
   .pipe(sass())
-  .pipe(gulp.dest(assets + 'dist'))
+  .pipe(gulp.dest(dist + 'stylesheets'))
 })
 
 gulp.task('watch', function(){
