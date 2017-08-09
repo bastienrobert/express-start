@@ -1,4 +1,4 @@
-function ApplicationControler() {
+function ApplicationController() {
   let ActiveController = require(root_path + '/lib/active-controller.js')(),
       helper = ActiveController[0],
       model = ActiveController[1]
@@ -11,4 +11,4 @@ function ApplicationControler() {
   includeHelperAndModel()
 }
 
-module.exports = ApplicationControler
+module.exports = ApplicationController

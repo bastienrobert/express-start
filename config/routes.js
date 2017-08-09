@@ -8,5 +8,5 @@ module.exports = function(app){
     req.flash('error', 'New error flash message asked')
     res.redirect('/')
   })
-
+  
 }
