@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha specs/**.spec.js",
-    "start": "gulp"
+    "dev": "gulp",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
