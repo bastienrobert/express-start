@@ -1,5 +1,5 @@
 {
-  "name": "express-mvc",
+  "name": "express-start",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,6 +9,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/bastienrobert/express-start.git"
+  },
   "dependencies": {
     "ejs": "^2.5.7",
     "ejs-locals": "^1.0.2",
@@ -17,6 +21,7 @@
     "express-session": "^1.15.5",
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
+    "pluralize": "^6.0.0",
     "sequelize": "^4.4.2",
     "sequelize-cli": "^2.8.0"
   },
