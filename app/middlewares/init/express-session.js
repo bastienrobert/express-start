@@ -3,15 +3,10 @@ module.exports = function(app){
   let session = require('express-session'),
       RedisStore = require('connect-redis')(session),
       redis = require('redis'),
-      client = redis.createClient()
+      client = require('redis').createClient(process.env.REDIS_URL);
 
   app.use(session({
-    store: new RedisStore({
-      host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT,
-      client: client,
-      ttl: 260}
-    ),
+    store: new RedisStore({client: client}),
     secret: 'please set a secret key',
     resave: false,
     saveUninitialized: true,
