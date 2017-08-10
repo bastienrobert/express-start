@@ -1,12 +1,13 @@
 module.exports = function(app){
 
-  app.get('/', function(req, res){
-    res.render('pages/index')
-  })
+  let controllers = require(global.controllers)
 
-  app.post('/', function(req, res){
-    req.flash('error', 'New error flash message asked')
-    res.redirect('/')
-  })
-  
+  app.get('/', controllers.application.index)
+  app.post('/', controllers.application.flash)
+
+  // app.post('/', function(req, res){
+  //   req.flash('error', 'New error flash message asked')
+  //   res.redirect('/')
+  // })
+
 }

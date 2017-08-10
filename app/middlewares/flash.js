@@ -1,15 +1,15 @@
-module.exports = function (request, response, next){
+module.exports = function (req, res, next){
 
-  if (request.session.flash){
-    response.locals.flash = request.session.flash
-    request.session.flash = undefined
+  if (req.session.flash){
+    res.locals.flash = req.session.flash
+    req.session.flash = undefined
   }
 
-  request.flash = function(type, content){
-    if (request.session.flash === undefined) {
-      request.session.flash = {}
+  req.flash = function(type, content){
+    if (req.session.flash === undefined) {
+      req.session.flash = {}
     }
-    request.session.flash[type] = content
+    req.session.flash[type] = content
   }
   next()
 }
