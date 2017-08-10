@@ -68,3 +68,27 @@ You can add locals by copying local_env.example.json to local_env.json.
 Then, it's a simple JSON array.
 
 Add new keys & values, and then call it with the method : global.locals.KEY
+
+## Controllers
+Wow, such great, you want to create a controller : it's really simple.
+
+First, import controller let in routes :
+```let controllers = require(root_path + '/app/controllers/')```
+
+Then, create a route :
+```app.get('/test', controllers.test.index)```
+
+This route will return to your controller named test_controller.js in app/controller.
+It will call the method index you defined, like it :
+
+```
+index(req, res) {
+  models.Test.findAll().then(function(DB_REQ_VALUE) {
+    res.render('test/index', {
+      tests: DB_REQ_VALUE
+    })
+  })
+}
+```
+
+And then, it will render your view in app/views/test/index.ejs, and the var ```tests``` will contain the DB request.
