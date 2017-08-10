@@ -1,3 +1,7 @@
-// ApplicationHelper -> Declare all your helpers for each controllers
+module.exports = {
 
-module.exports = function() {}
+  test() {
+    return console.log('application helper, test method (called by application controller)')
+  }
+
+}

@@ -63,6 +63,11 @@ Express Helpers is a port of EJS's ViewHelpers and additional helpers are very s
 
 Check the documentation here : https://github.com/tanema/express-helpers/wiki
 
+You can add your personnal helpers on app/helpers. Named them like ```NAME_helper.js``` and require it with
+```
+let helper = require(global.helpers).NAME
+```
+
 ## Locals variables
 You can add locals by copying local_env.example.json to local_env.json.
 Then, it's a simple JSON array.
@@ -73,10 +78,10 @@ Add new keys & values, and then call it with the method : global.locals.KEY
 Wow, such great, you want to create a controller : it's really simple.
 
 First, import controller let in routes :
-```let controllers = require(root_path + '/app/controllers/')```
+```let controllers = require(global.controllers)```
 
 Then, create a route :
-```app.get('/test', controllers.test.index)```
+```app.get('/test', controllers.test.index())```
 
 This route will return to your controller named test_controller.js in app/controller.
 It will call the method index you defined, like it :

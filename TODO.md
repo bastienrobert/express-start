@@ -1,8 +1,7 @@
 # TODO
 
 ## Important
-- Helper method like controllers and models
-- Auto include helper and model in controller file
+- Auto include helper and model in controller file : __HAS TO BE DEBUG__
 
 ## Before production
 - All in object (let's convert :) )
