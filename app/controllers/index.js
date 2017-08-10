@@ -22,7 +22,9 @@ module.exports = function() {
             .slice(0, -1)
             .join(' ')
       ))
-      controllers[controllerName] = controllerPath
+      controllers[controllerName] = require(controllerPath)
     })
+
     return controllers
+
 }
