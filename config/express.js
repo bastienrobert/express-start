@@ -6,6 +6,10 @@ module.exports = function(app, express, engine){
 
   app.use(express.static('public/assets'))
 
-  app.listen(8080)
+  if (process.env.NODE_ENV == "production") {
+    app.listen(80)
+  } else {
+    app.listen(8080)
+  }
 
 }
