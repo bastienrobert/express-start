@@ -9,13 +9,13 @@ module.exports = {
 
     res.format({
       text: function(){
-        res.send('hey')
+        res.send('hey, plain text !')
       },
       html: function(){
-        res.render('pages/index')
+        res.render('application/home')
       },
       json: function(){
-        res.send({ message: 'hey' })
+        res.send({ message: 'hey, this is a JSON' })
       }
     })
 
