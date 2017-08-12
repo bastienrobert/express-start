@@ -4,10 +4,10 @@ let app = express()
 
 // Get the root_path
 global.root_path = require('./lib/root-path.js')()
-require('dotenv').config({path: './config/local.env'})
 
-global.controllers = root_path + '/lib/active-controller'
-global.helpers = root_path + '/lib/active-helper'
+// Get locals & globals vars
+require('dotenv').config({path: './config/local.env'}) // locals
+require('./lib/globals')() // globals
 
 // Configuration server'file
 require('./config/express')(app, express, engine)
