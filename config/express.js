@@ -7,6 +7,8 @@ module.exports = function(app, express, engine){
   app.use(express.static('public/assets'))
 
   let port = process.env.PORT || 8080
-  app.listen(port)
+  app.listen(port, function(){
+    console.log("listening on port " + port)
+  })
 
 }
