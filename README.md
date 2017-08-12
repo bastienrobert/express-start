@@ -97,3 +97,16 @@ index(req, res) {
 ```
 
 And then, it will render your view in app/views/test/index.ejs, and the var ```tests``` will contain the DB request.
+
+## Controllers and helpers inheritance
+
+You want to create a new controller or a new helper ? You can inherit the application class like this :
+```
+require('./application_controller')
+class TestController {
+  method() {
+    ...
+  }
+}
+module.exports = new TestController
+```

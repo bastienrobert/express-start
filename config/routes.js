@@ -5,9 +5,4 @@ module.exports = function(app){
   app.get('/', controllers.application.index)
   app.post('/', controllers.application.flash)
 
-  // app.post('/', function(req, res){
-  //   req.flash('error', 'New error flash message asked')
-  //   res.redirect('/')
-  // })
-
 }
