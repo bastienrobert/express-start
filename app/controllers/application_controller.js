@@ -1,6 +1,6 @@
 let helper = require(global.helpers).application
 
-module.exports = {
+class ApplicationController {
 
   // GET index
   index(req, res) {
@@ -19,7 +19,7 @@ module.exports = {
       }
     })
 
-  },
+  }
 
   // POST index
   flash(req, res) {
@@ -28,3 +28,5 @@ module.exports = {
   }
 
 }
+
+module.exports = new ApplicationController
