@@ -13,7 +13,7 @@ global.helpers = root_path + '/lib/active-helper'
 require('./config/express')(app, express, engine)
 
 // Middleware import
-require('./app/middlewares/init/express-session')(app)
+require('./lib/express-session')(app) // Express session init
 require('./app/middlewares/application')(app)
 
 // Routes file
