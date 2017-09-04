@@ -18,7 +18,7 @@ Then, make an :
 ```
 npm run dev
 ```
-to run it as developper (and get access to the webpack module bundler)
+to run it as developper (and generate static assets with Gulp)
 
 ## Architecture
 It have a simple MVC architecture, I love Ruby on Rails architecture so I do the same here :
