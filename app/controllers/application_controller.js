@@ -1,11 +1,8 @@
-let helper = require(global.helpers).application
-
 class ApplicationController {
 
   // GET index
   index(req, res) {
     console.log('application controller, test method')
-    console.log(helper.test())
 
     res.format({
       text: function(){
