@@ -5,7 +5,7 @@ let fs        = require('fs'),
     Sequelize = require('sequelize'),
     basename  = path.basename(module.filename),
     env       = process.env.NODE_ENV || 'development',
-    config    = require(root_path + '/config/sequelize.json')[env],
+    config    = require(root_path + '/config/database.json')[env],
     db        = {}
 
 if (config.use_env_variable) {
