@@ -1,6 +1,9 @@
-let express = require('express')
-let engine = require('ejs-locals')
-let app = express()
+let express = require('express'),
+    engine = require('ejs-locals'),
+    app = express()
+
+// Protect from HTTP vulnerabilities
+require('./config/helmet')(app)
 
 // Get the root_path
 global.root_path = require('./lib/root-path.js')()
