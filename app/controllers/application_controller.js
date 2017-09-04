@@ -9,7 +9,9 @@ class ApplicationController {
         res.send('hey, plain text !')
       },
       html: function(){
-        res.render('application/home')
+        res.render('application/home', {
+          csrf: req.csrfToken()
+        })
       },
       json: function(){
         res.send({ message: 'hey, this is a JSON' })

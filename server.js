@@ -2,9 +2,6 @@ let express = require('express'),
     engine = require('ejs-locals'),
     app = express()
 
-// Protect from HTTP vulnerabilities
-require('./config/helmet')(app)
-
 // Get the root_path
 global.root_path = require('./lib/root-path.js')()
 
@@ -18,6 +15,10 @@ require('./config/express')(app, express, engine)
 // Middleware import
 require('./lib/express-session')(app) // Express session init
 require('./app/middlewares')(app)
+
+// Protect from HTTP vulnerabilities
+require('./config/helmet')(app)
+require('./config/csurf')(app)
 
 // Routes file
 require('./config/routes')(app, express)
