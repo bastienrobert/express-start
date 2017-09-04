@@ -4,7 +4,8 @@
  stylesheet('/assets/stylesheets/pages.css') */
 %>
 
-<h3>Index page !</h3>
+<% setLocale('en') %>
+<h3><%= __("hello.hi") %></h3>
 <form action="/" method="post">
   <input type="hidden" name="_csrf" value="<%= csrf %>">
   <input type="submit" value="Send error flash">

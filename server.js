@@ -12,6 +12,9 @@ require('./lib/globals')() // globals
 // Configuration server'file
 require('./config/express')(app, express, engine)
 
+// Languages
+require('./config/i18n')(app)
+
 // Middleware import
 require('./lib/express-session')(app) // Express session init
 require('./app/middlewares')(app)
