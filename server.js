@@ -14,7 +14,7 @@ require('./config/express')(app, express, engine)
 
 // Middleware import
 require('./lib/express-session')(app) // Express session init
-require('./app/middlewares/application')(app)
+require('./app/middlewares')(app)
 
 // Routes file
 require('./config/routes')(app, express)
