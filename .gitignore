@@ -69,3 +69,6 @@ config/local.env
 
 # Redis file
 dump.rdb
+
+# DS_Stores
+.DS_Store
