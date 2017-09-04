@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "snyk test && mocha specs/**.spec.js",
+    "snyk": "snyk test",
+    "test": "mocha specs/**.spec.js",
     "dev": "gulp",
     "start": "node server.js"
   },
