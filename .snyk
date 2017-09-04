@@ -1,0 +1,17 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:ejs:20161128':
+    - ejs-locals > ejs:
+        reason: None given
+        expires: '2017-10-04T12:33:21.936Z'
+  'npm:ejs:20161130':
+    - ejs-locals > ejs:
+        reason: None given
+        expires: '2017-10-04T12:33:21.936Z'
+  'npm:ejs:20161130-1':
+    - ejs-locals > ejs:
+        reason: None given
+        expires: '2017-10-04T12:33:21.936Z'
+patch: {}

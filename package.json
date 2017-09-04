@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha specs/**.spec.js",
+    "test": "snyk test && mocha specs/**.spec.js",
     "dev": "gulp",
     "start": "node server.js"
   },
@@ -25,7 +25,7 @@
     "helmet": "^3.8.1",
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
-    "pg": "^7.1.0",
+    "pg": "^7.1.2",
     "pluralize": "^6.0.0",
     "redis": "^2.8.0",
     "sequelize": "^4.4.2",
@@ -37,6 +37,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "mocha": "^3.5.0",
-    "sequelize-cli": "^2.8.0"
+    "sequelize-cli": "^2.8.0",
+    "snyk": "^1.40.2"
   }
 }
