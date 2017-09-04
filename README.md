@@ -67,10 +67,8 @@ Express Helpers is a port of EJS's ViewHelpers and additional helpers are very s
 
 Check the documentation here : https://github.com/tanema/express-helpers/wiki
 
-You can add your personnal helpers on app/helpers. Named them like ```NAME_helper.js``` and require it with
-```
-let helper = require(global.helpers).NAME
-```
+## Middlewares
+Like Ruby on Rails helpers : add methods in middleware dir.
 
 ## Locals variables
 You can add locals by copying local_env.example.json to local_env.json.
